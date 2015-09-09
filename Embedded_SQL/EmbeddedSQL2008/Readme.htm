@@ -1,0 +1,152 @@
+<html>
+<head>
+<META HTTP-EQUIV="Expires" CONTENT="0">
+</head>
+
+<p><b><font size="5">JDBC</font><font size="5"> - MS_SQL Server&nbsp;2008&nbsp;&nbsp; Interface</font></b></p>
+
+<u><font size="4">Software installation</font></u><font size="4">:</font>
+
+<ul>
+
+  <li>Follow all the instructions for
+  <a href="http://www.cis.fiu.edu/~prabakar/resource/SQL/SQL2008/">SQL Server 
+  related installation</a> (in the given sequence).<br><br>
+
+  <li>If Eclipse is not already installed,<br>
+  download it from <a href="http://www.eclipse.org">
+  http://www.eclipse.org</a>&nbsp;
+  <br>[&quot;downloads&quot; tab and click on Eclipse SDK 3.1.2, Windows (103 MB)]<br>
+  and install it.<br><br>
+
+</ul>
+
+<p><u><font size="4">SQL Server 2008 Setup</font></u><font size="4">:</font></p>
+
+<ul>
+
+  <li><b>Set mixed authentication mode:</b><br>
+
+  Start -&gt; All Programs -&gt; Microsoft SQL Server 2008 -&gt; 
+  SQL Server Management Studio<br>
+  On the &quot;Connect to Server&quot; window, login with the valid username and password;&nbsp; 
+  Click &quot;Connect&quot;<br>
+
+  </font>
+
+At the top of the left panel, right click on machine(SQL Server 10.0. ...) and select Properties<br>
+On the left panel of the "Server Properties" window, select Security<br>
+Choose "SQL Server and Windows Authentication mode" and click OK<br><br>
+
+  <li><b>Create a new database:</b><br>
+
+  On the left panel, expand &quot;Databases&quot; <br>
+
+  Right click "Databases"&nbsp; -&gt; Select &quot;New Database...&quot; and create an empty 
+
+  &quot;company&quot; database<br>
+
+  <br>
+
+  <li><b>Populate the new database:</b><br>
+
+  On the left panel, right click on "company" database and select 
+  &quot;New Query&quot;<br>
+
+  &nbsp;&nbsp;Click on &quot;Open File&quot; icon (from the icon bar)<br>
+
+  &nbsp;&nbsp;Browse and choose setupCompany.sql -> Open;<br>
+  On the icon bar, a box on the left side displays the name of the active 
+  database.<br>
+  Click the dropdown list of databases of that box and select "company" database.<br>
+    Click "! Execute" icon<br>
+
+  <br>
+
+  
+  <li><b>Create a new user and set permissions:</b><br>
+
+  On the left panel of Server Management Studio window, <br>
+
+  Click "Security" and right click on "New" and select "Login..."<br>
+
+  &nbsp;&nbsp;General: Name as Application program username(cgs4366), Choose SQL Server Authentication,<br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password(4366), Confirm password (4366), company as default database<br>
+
+  &nbsp;&nbsp;UserMapping: Enable company (top), Enable  db_datareader, db_datawriter, 
+  public (bottom)<br>
+  &nbsp;&nbsp;Click OK<br><br>
+  
+  <li><b>NetBeans Configuration:</b><br>Start a new 
+	project and paste all five sample Java programs into the default source 
+	package<br>
+	RightClick on Libraries =&gt; Add JAR/Fodler... =&gt; choose 
+	jtds-1.2.4.jar file from the expanded downloaded folder.
+	<br>Run each sample 
+	program (remember to edit database server hostname in the sample program 
+	file as needed).<br>
+    If the project has any reference error, resolve all reference errors and 
+  then perform a clean build.
+	<br><br>
+	<li><b>Eclipse Configuration:</b><br>Configure Eclipse with these
+    <a href="file:./EclipseConfiguration.pdf">configuration steps</a><br><B>Use 
+	jtds-1.2.4.jar instead of sqljdbc.jar in the above eclipse configuration 
+	steps.</B><br>
+  </ul>
+
+<p><u><font size="4">Testing Database Connectivity</font></u><font size="4">:</font></p>
+
+<ul>
+
+  <li>To establish a connection between a Java database application program and</li><br>
+  Microsoft SQL server, the application program must perform the following two steps:<br>
+  &nbsp;&nbsp;- register appropriate database driver (JDBC)<br>
+  &nbsp;&nbsp;- connect to a database server with appropriate authentication<br>
+  <br>
+
+  <li>Following two sample programs test database connectivity</li><br>
+
+  &nbsp;&nbsp; <a href="./SamplePrograms/TestDB1.java">TestDB1.java</a> &nbsp; -- fixed username & password<br>
+
+  &nbsp;&nbsp; <a href="./SamplePrograms/TestDB2.java">TestDB2.java</a> &nbsp; -- tests for any username & password<br>
+
+  <br>
+
+</ul>
+
+<p><u><font size="4">Testing Dynamic SQL queries</font></u><font size="4">:</font></p>
+
+<ul>
+
+  <li>JDBC - MS_SQL can support dynamic queries.<br>
+  <li>Following three sample programs demonstrate dynamic queries
+  and assume the default database is "company".</li><br>
+
+  &nbsp;&nbsp; <a href="./SamplePrograms/TestDB3.java">TestDB3.java</a> &nbsp; -- fixed dynamic query string<br>
+
+  &nbsp;&nbsp; <a href="./SamplePrograms/TestDB4.java">TestDB4.java</a> &nbsp; -- dynamic query string with an argument<br>
+
+  &nbsp;&nbsp; <a href="./SamplePrograms/TestDB5.java">TestDB5.java</a> &nbsp; -- nested dynamic queries<br>
+
+  <br>
+
+</ul>
+
+<p><u><font size="4">Reference Links</font></u><font size="4">:</font></p>
+
+<ul>
+
+  <li><a href=http://java.sun.com/products/jdbc/overview.html>JDBC Overview</a><br>
+
+  <li><a href=http://java.sun.com/j2se/1.5.0/docs/guide/jdbc/index.html>JDBC API</a><br>
+
+  <li><a href=http://developer.java.sun.com/developer/codesamples/jdbc.html>JDBC Code Samples</a><br>
+
+  <li><a href=http://java.sun.com/docs/books/tutorial/jdbc/basics/prepared.html>Using PreparedStatement</a><br>
+
+  <li><a href=http://java.sun.com/j2se/1.5.0/docs/api/java/sql/PreparedStatement.html>PreparedStatement Class</a>
+</ul>
+<p><br>
+&nbsp;--Prabakar</p>
+</html>

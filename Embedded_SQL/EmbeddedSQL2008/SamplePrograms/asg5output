@@ -1,0 +1,38 @@
+COP 4710                Asg-5             Summer 2014
+
+Specification:
+For each valid projectNumber value in the input file, list the following:
+  - project number
+  - name of the project
+  - name of the department that controls the project
+  - name of the manager of the department
+  - the number of work assignments for the project
+
+At the end, list
+  - the average number of work assignments per (valid) project
+    (a single value for the entire input file) (processed from the input file).
+
+
+COP 4710 [Asg No.5] - Embedded SQL retrieval queries 
+
+Enter hostname (e.g. localhost): pluto
+Enter database name: cop4710
+Enter username: cop4710
+
+Successfully connected to DB: cop4710
+
+Enter input file name: asg5inp.txt
+
+Output:
+
+Proj#	ProjName	Department	Manager		# of assignments
+-------	-------------	---------------	--------------	----------------
+10	Computerization	Administration	Jennifer Wallace	3
+3	ProductZ	Research	Franklin Wong		2
+20	Reorganization	Headquarters	James Borg		3
+Invalid input project number: 15
+30	Newbenefits	Administration	Jennifer Wallace	3
+
+The average number of work assignments per valid project is: 2.75
+
+--Prabakar

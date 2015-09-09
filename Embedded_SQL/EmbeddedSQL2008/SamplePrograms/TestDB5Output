@@ -1,0 +1,28 @@
+TestDB5.java
+
+run:
+
+Enter database name: company
+
+Enter SQL username: sa
+
+Successfully connected
+
+
+Enter a department name (Research/Administration/Headquarters): Research
+
+Outer loop output:
+  John Smith 123456789
+    Inner loop output:
+      Alice
+      Elizabeth
+      Michael
+  Franklin Wong 333445555
+    Inner loop output:
+      Alice
+      Joy
+      Theodore
+  Joyce English 453453453
+    Inner loop output:
+  Ramesh Narayan 666884444
+    Inner loop output:

@@ -1,0 +1,17 @@
+0.24
+Allen      Coffee
+Allen      Floss
+Bianca     Coffee
+Bianca     Jam
+Bianca     Rice
+Bianca     Shampoo
+Nina       Jam
+Pablo      Banana
+Pablo      Coffee
+Pablo      Rice
+Pablo      Shampoo
+Sam        Banana
+Sam        Coffee
+Sam        Floss
+Tina       Banana
+Tina       Rice
